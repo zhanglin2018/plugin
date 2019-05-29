@@ -11,19 +11,15 @@ public class ViewExampleAction implements IViewActionDelegate {
 	private IWorkbenchPart targetPart;
 
 	public void init(IViewPart view) {
-		// TODO 自动生成方法存根
 		this.targetPart = view;
 	}
 
 	public void run(IAction action) {
-		// TODO 自动生成方法存根
 		MessageDialog.openInformation(targetPart.getSite().getShell(),
-				"消息", "视图示例操作被选中");
+				"ViewExampleAction", "ViewExampleAction has been called.");
 	}
 
 	public void selectionChanged(IAction action, ISelection selection) {
-		// TODO 自动生成方法存根
-
 	}
 
 }

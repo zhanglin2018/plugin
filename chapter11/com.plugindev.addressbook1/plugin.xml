@@ -15,6 +15,7 @@
             class="com.plugindev.addressbook1.views.SampleView"
             id="com.plugindev.addressbook1.views.SampleView">
       </view>
+      <Generic></Generic>
    </extension>
    <extension
          point="org.eclipse.ui.perspectiveExtensions">
@@ -33,6 +34,12 @@
       <contexts
             file="contexts.xml">
       </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <Generic>
+         <Generic></Generic>
+      </Generic>
    </extension>
 
 </plugin>

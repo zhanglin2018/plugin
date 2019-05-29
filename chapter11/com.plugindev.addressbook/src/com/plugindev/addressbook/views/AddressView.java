@@ -55,6 +55,7 @@ public class AddressView extends ViewPart {
 			return new String[] { "One", "Two", "Three" };
 		}
 	}
+	
 	class ViewLabelProvider extends LabelProvider implements ITableLabelProvider {
 		public String getColumnText(Object obj, int index) {
 			return getText(obj);
@@ -67,6 +68,7 @@ public class AddressView extends ViewPart {
 					getSharedImages().getImage(ISharedImages.IMG_OBJ_ELEMENT);
 		}
 	}
+	
 	class NameSorter extends ViewerSorter {
 	}
 
@@ -86,9 +88,13 @@ public class AddressView extends ViewPart {
 		viewer.setLabelProvider(new ViewLabelProvider());
 		viewer.setSorter(new NameSorter());
 		viewer.setInput(getViewSite());
+		
 		makeActions();
+		
 		hookContextMenu();
+		
 		hookDoubleClickAction();
+		
 		contributeToActionBars();
 	}
 
@@ -100,6 +106,7 @@ public class AddressView extends ViewPart {
 				AddressView.this.fillContextMenu(manager);
 			}
 		});
+		
 		Menu menu = menuMgr.createContextMenu(viewer.getControl());
 		viewer.getControl().setMenu(menu);
 		getSite().registerContextMenu(menuMgr, viewer);
@@ -135,10 +142,12 @@ public class AddressView extends ViewPart {
 				showMessage("Action 1 executed");
 			}
 		};
+		
 		action1.setText("Action 1");
 		action1.setToolTipText("Action 1 tooltip");
 		action1.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().
 			getImageDescriptor(ISharedImages.IMG_OBJS_INFO_TSK));
+		
 		
 		action2 = new Action() {
 			public void run() {
@@ -149,6 +158,7 @@ public class AddressView extends ViewPart {
 		action2.setToolTipText("Action 2 tooltip");
 		action2.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().
 				getImageDescriptor(ISharedImages.IMG_OBJS_INFO_TSK));
+		
 		doubleClickAction = new Action() {
 			public void run() {
 				ISelection selection = viewer.getSelection();

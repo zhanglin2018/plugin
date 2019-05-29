@@ -8,18 +8,13 @@ import org.eclipse.ui.IEditorPart;
 public class EditorExampleAction implements IEditorActionDelegate {
 
 	public void setActiveEditor(IAction action, IEditorPart targetEditor) {
-		// TODO 自动生成方法存根
-
 	}
 
 	public void run(IAction action) {
-		// TODO 自动生成方法存根
 
 	}
 
 	public void selectionChanged(IAction action, ISelection selection) {
-		// TODO 自动生成方法存根
-
 	}
 
 }

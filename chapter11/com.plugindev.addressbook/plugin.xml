@@ -20,20 +20,20 @@
          point="org.eclipse.ui.actionSets">
       <actionSet
             id="com.plugindev.addressbook.actionSet"
-            label="地址本操作"
+            label="样本操作集"
             visible="true">
          <menu
                id="AddressBookMenu"
-               label="地址本">
-            <separator name="content"/>
+               label="样本菜单">
+            <separator name="sampleGroup"/>
          </menu>
          <action
                class="com.plugindev.addressbook.actions.OpenAddressViewAction"
                definitionId="com.plugindev.addressbook.commands.openAddressView"
                icon="icons/sample.gif"
                id="com.plugindev.addressbook.actions.OpenAddressViewAction"
-               label="打开视图"
-               menubarPath="AddressBookMenu/content"
+               label="样本操作"
+               menubarPath="AddressBookMenu/sampleGroup"
                toolbarPath="Normal/addition"
                tooltip="在当前透视图中打开地址本视图"/>
       </actionSet>
