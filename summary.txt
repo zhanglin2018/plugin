@@ -1,0 +1,10 @@
+1.top up menu in view
+2.toolbar
+3.popdown
+4.main menu
+5.main toolbar
+
+task:
+0.enable or disable a menu/action/command in viewPart  yes
+1.enable or disable a menu/action/command in plugin.   no
+2.add some menuitem in popdown of the viewPart toolbar. no

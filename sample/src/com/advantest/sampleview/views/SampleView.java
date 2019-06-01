@@ -9,8 +9,10 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.jface.action.*;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.ui.*;
+import org.eclipse.ui.handlers.IHandlerService;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.SWT;
+import org.eclipse.core.commands.IHandler;
 import org.eclipse.core.runtime.IAdaptable;
 import javax.inject.Inject;
 
@@ -187,6 +189,8 @@ public class SampleView extends ViewPart {
 		
 		menuMgr.addMenuListener(new IMenuListener() {
 			public void menuAboutToShow(IMenuManager manager) {
+				action1.setEnabled(true);
+				action2.setEnabled(true);
 				SampleView.this.fillContextMenu(manager);
 			}
 		});
@@ -264,6 +268,14 @@ public class SampleView extends ViewPart {
 				IStructuredSelection selection = viewer.getStructuredSelection();
 				Object obj = selection.getFirstElement();
 				showMessage("Double-click detected on "+obj.toString());
+				
+				IHandlerService handlerService = (IHandlerService)getSite().getService(IHandlerService.class);
+				try {
+					handlerService.executeCommand("com.advantest.sampleView.command.run", null);
+				} catch (Exception e) {
+					// TODO: handle exception
+					throw new RuntimeException("com.advantest.sampleView.command.run command can not found.");
+				}
 			}
 		};
 	}

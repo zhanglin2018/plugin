@@ -233,5 +233,13 @@
             commandId="com.advantest.sampleView.command.contextCommand">
       </handler>
    </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.advantest.sampleView.command.contextCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+1">
+      </key>
+   </extension>
 
 </plugin>
