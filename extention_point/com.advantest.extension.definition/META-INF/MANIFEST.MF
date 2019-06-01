@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Definition
+Bundle-SymbolicName: com.advantest.extension.definition;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: ADVANTEST
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: com.advantest.extension.definition

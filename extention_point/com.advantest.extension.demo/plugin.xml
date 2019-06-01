@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.advantest.extension.definition.greater">
+      <imp
+            class="com.advantest.extension.demo.HelloWorld"></imp>
+   </extension>
+
+</plugin>

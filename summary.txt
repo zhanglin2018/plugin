@@ -8,3 +8,5 @@ task:
 0.enable or disable a menu/action/command in viewPart  yes
 1.enable or disable a menu/action/command in plugin.   no
 2.add some menuitem in popdown of the viewPart toolbar. no
+
+sample: menu,command,toolbar,treeviewer.

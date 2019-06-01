@@ -14,6 +14,12 @@ import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.SWT;
 import org.eclipse.core.commands.IHandler;
 import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.core.runtime.IConfigurationElement;
+import org.eclipse.core.runtime.IExtension;
+import org.eclipse.core.runtime.IExtensionPoint;
+import org.eclipse.core.runtime.IExtensionRegistry;
+import org.eclipse.core.runtime.Platform;
+
 import javax.inject.Inject;
 
 
@@ -276,6 +282,10 @@ public class SampleView extends ViewPart {
 					// TODO: handle exception
 					throw new RuntimeException("com.advantest.sampleView.command.run command can not found.");
 				}
+				
+				IExtensionRegistry registry = Platform.getExtensionRegistry();
+				IExtensionPoint extensionPoint = registry.getExtensionPoint("org.eclipse.ui.views");
+				IExtension[] extensions = extensionPoint.getExtensions();
 			}
 		};
 	}
